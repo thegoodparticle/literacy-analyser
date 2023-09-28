@@ -130,6 +130,8 @@ BULDANA,2011	72.69%
 
 ```
 
+Complete output file can be found here - https://github.com/thegoodparticle/literacy-analyser/blob/main/output/part-00000
+
 ## Statistics
 
 On running the _'hadoop jar ...'_ command, jobs start executing and as the execution progresses, we will start seeing the statistics one-by-one. As soon as the job ends, it prints out the total statistics of the run.
