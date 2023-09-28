@@ -1,0 +1,159 @@
+[centos@master literacy-analyser-main]$ hadoop jar /opt/hadoop-3.2.4/share/hadoop/tools/lib/hadoop-streaming-3.2.4.jar -file src/mapper.py -file src/reducer.py -input resources -output literacy_rate -mapper mapper.py -reducer reducer.py 
+2023-09-28 18:20:02,591 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [src/mapper.py, src/reducer.py, /tmp/hadoop-unjar761362146256717044/] [] /tmp/streamjob1610929021382608595.jar tmpDir=null
+2023-09-28 18:20:03,565 INFO client.RMProxy: Connecting to ResourceManager at master/172.31.15.252:8032
+2023-09-28 18:20:03,798 INFO client.RMProxy: Connecting to ResourceManager at master/172.31.15.252:8032
+2023-09-28 18:20:03,996 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/centos/.staging/job_1695918388948_0011
+2023-09-28 18:20:04,394 INFO mapred.FileInputFormat: Total input files to process : 1
+2023-09-28 18:20:04,490 INFO mapreduce.JobSubmitter: number of splits:2
+2023-09-28 18:20:04,655 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1695918388948_0011
+2023-09-28 18:20:04,656 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-09-28 18:20:04,864 INFO conf.Configuration: resource-types.xml not found
+2023-09-28 18:20:04,864 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-09-28 18:20:04,935 INFO impl.YarnClientImpl: Submitted application application_1695918388948_0011
+2023-09-28 18:20:04,987 INFO mapreduce.Job: The url to track the job: http://master:8088/proxy/application_1695918388948_0011/
+2023-09-28 18:20:04,990 INFO mapreduce.Job: Running job: job_1695918388948_0011
+2023-09-28 18:20:12,104 INFO mapreduce.Job: Job job_1695918388948_0011 running in uber mode : false
+2023-09-28 18:20:12,105 INFO mapreduce.Job:  map 0% reduce 0%
+2023-09-28 18:20:21,330 INFO mapreduce.Job:  map 100% reduce 0%
+2023-09-28 18:20:29,414 INFO mapreduce.Job:  map 100% reduce 100%
+2023-09-28 18:20:29,421 INFO mapreduce.Job: Job job_1695918388948_0011 completed successfully
+2023-09-28 18:20:29,511 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=1971893
+		FILE: Number of bytes written=4671852
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=16475592
+		HDFS: Number of bytes written=1420
+		HDFS: Number of read operations=11
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=28160
+		Total time spent by all reduces in occupied slots (ms)=14046
+		Total time spent by all map tasks (ms)=14080
+		Total time spent by all reduce tasks (ms)=4682
+		Total vcore-milliseconds taken by all map tasks=14080
+		Total vcore-milliseconds taken by all reduce tasks=4682
+		Total megabyte-milliseconds taken by all map tasks=28835840
+		Total megabyte-milliseconds taken by all reduce tasks=14383104
+	Map-Reduce Framework
+		Map input records=132316
+		Map output records=82967
+		Map output bytes=1805953
+		Map output materialized bytes=1971899
+		Input split bytes=236
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=70
+		Reduce shuffle bytes=1971899
+		Reduce input records=82967
+		Reduce output records=70
+		Spilled Records=165934
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=351
+		CPU time spent (ms)=4860
+		Physical memory (bytes) snapshot=1618956288
+		Virtual memory (bytes) snapshot=10730037248
+		Total committed heap usage (bytes)=1468006400
+		Peak Map Physical memory (bytes)=716197888
+		Peak Map Virtual memory (bytes)=3008458752
+		Peak Reduce Physical memory (bytes)=187342848
+		Peak Reduce Virtual memory (bytes)=4713586688
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=16475356
+	File Output Format Counters 
+		Bytes Written=1420
+2023-09-28 18:20:29,512 INFO streaming.StreamJob: Output directory: literacy_rate
+[centos@master literacy-analyser-main]$ 
+[centos@master literacy-analyser-main]$ 
+[centos@master literacy-analyser-main]$ hadoop fs -ls literacy_rate
+Found 2 items
+-rw-r--r--   3 centos hadoop          0 2023-09-28 18:20 literacy_rate/_SUCCESS
+-rw-r--r--   3 centos hadoop       1420 2023-09-28 18:20 literacy_rate/part-00000
+[centos@master literacy-analyser-main]$ hadoop fs -cat literacy_rate/part-00000
+AHMADNAGAR,2001	64.31%
+AHMADNAGAR,2011	69.38%
+AKOLA,2001	69.64%
+AKOLA,2011	77.80%
+AMRAVATI,2001	71.21%
+AMRAVATI,2011	77.96%
+AURANGABAD,2001	61.15%
+AURANGABAD,2011	67.65%
+BEED,2001	57.44%
+BEED,2011	66.48%
+BHANDARA,2001	67.83%
+BHANDARA,2011	74.97%
+BULDANA,2001	64.23%
+BULDANA,2011	72.69%
+CHANDRAPUR,2001	63.30%
+CHANDRAPUR,2011	71.62%
+DHULE,2001	60.94%
+DHULE,2011	63.09%
+GADCHIROLI,2001	50.51%
+GADCHIROLI,2011	66.02%
+GONDIYA,2001	67.33%
+GONDIYA,2011	75.93%
+HINGOLI,2001	55.04%
+HINGOLI,2011	67.16%
+JALGAON,2001	64.66%
+JALGAON,2011	68.37%
+JALNA,2001	53.96%
+JALNA,2011	61.03%
+KOLHAPUR,2001	67.11%
+KOLHAPUR,2011	72.91%
+LATUR,2001	60.31%
+LATUR,2011	67.26%
+MUMBAI SUBURBAN,2001	76.58%
+MUMBAI SUBURBAN,2011	80.96%
+MUMBAI,2001	77.61%
+MUMBAI,2011	81.32%
+NAGPUR,2001	73.17%
+NAGPUR,2011	78.95%
+NANDED,2001	56.52%
+NANDED,2011	65.14%
+NANDURBAR,2001	45.99%
+NANDURBAR,2011	55.00%
+NASHIK,2001	62.60%
+NASHIK,2011	71.15%
+OSMANABAD,2001	58.66%
+OSMANABAD,2011	68.64%
+PARBHANI,2001	55.15%
+PARBHANI,2011	63.06%
+PUNE,2001	69.68%
+PUNE,2011	76.06%
+RAIGARH,2001	65.88%
+RAIGARH,2011	73.65%
+RATNAGIRI,2001	64.58%
+RATNAGIRI,2011	74.26%
+SANGLI,2001	66.49%
+SANGLI,2011	72.62%
+SATARA,2001	67.96%
+SATARA,2011	74.10%
+SINDHUDURG,2001	70.55%
+SINDHUDURG,2011	78.39%
+SOLAPUR,2001	60.70%
+SOLAPUR,2011	67.41%
+THANE,2001	69.31%
+THANE,2011	74.39%
+WARDHA,2001	69.99%
+WARDHA,2011	78.37%
+WASHIM,2001	61.83%
+WASHIM,2011	72.67%
+YAVATMAL,2001	62.56%
+YAVATMAL,2011	72.96%
