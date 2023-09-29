@@ -21,10 +21,8 @@ Given dataset (in CSV format) on MHA population, contains multiple fields (refer
 
 ### Map-Reduce Diagrams
 
-```
-insert Map-Reduce diagram here
+![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/599e3b08-595a-47e0-a925-407119707504)
 
-```
 
 ### Map Function Pseudocode
 
