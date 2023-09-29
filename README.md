@@ -133,7 +133,7 @@ BULDANA,2011	72.69%
 Complete output file can be found here - https://github.com/thegoodparticle/literacy-analyser/blob/main/output/part-00000
 
 Screenshots: 
-![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/1eef7de1-9550-4f22-8d9a-5de4dfd70310)
+![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/af3c9a6e-c972-479f-b36a-df22c46c1fe1)
 ![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/8135de09-5d9c-4b94-89fa-598300fec562)
 ![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/9af2dd6c-86f4-4e3b-ba92-665fa559f6f3)
 ![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/7b344e8f-fb1b-4ad7-a0a6-54df66736b65)
