@@ -97,8 +97,8 @@ hadoop jar <path-to-hadoop-streaming-3.2.4.jar> -file src/mapper.py -file src/re
 ```
 <br>
 On executing this command, Map Reduce job starts running
-![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/422cf161-a6e6-43f3-98d1-00eaef1bc750)
 
+![image](https://github.com/thegoodparticle/literacy-analyser/assets/140166948/f2b1ff64-4e56-4fb2-b7c4-597ecd7f8ce3)
 
 ## Output
 
