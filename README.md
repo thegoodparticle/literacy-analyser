@@ -207,3 +207,5 @@ On running the _'hadoop jar ...'_ command, jobs start executing and as the execu
 ```
 
 ## Conclusion
+
+Output file contains the percentage of literates in each district in the respective census year. Keys (District, Year) are sorted in such a way that the district names are together. So, i<sup>th</sup> entry in output will have district literacy rate in 2001 and (i+1)<sup>th</sup> entry will have the literacy rate of the same district in 2011. We can compare them and analyse if the education policies are effective to what extent.
